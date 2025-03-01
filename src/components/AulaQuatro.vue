@@ -1,5 +1,5 @@
 <template>
-    <h5 class="mb-0">AULA 4 - Diretivas</h5>
+    <h5>AULA 4 - Diretivas</h5>
     <div v-show="showName">
         Nome: {{ firstName }} <br>
         Sobrenome: {{ lastName }}
