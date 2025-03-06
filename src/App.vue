@@ -4,6 +4,7 @@
   <div class="card-class">
     <AulaQuatro v-if="aula4"/>
     <AulaCinco v-if="aula5"/>
+    <LessonSix v-if="lesson6"/>
   </div>
 
   <img
@@ -17,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader'
 import AulaQuatro from './components/AulaQuatro';
 import AulaCinco from './components/AulaCinco';
+import LessonSix from './components/LessonSix.vue';
 
 export default {
   name: 'App',
@@ -24,13 +26,15 @@ export default {
     HelloWorld,
     TheHeader,
     AulaQuatro,
-    AulaCinco
+    AulaCinco,
+    LessonSix
   },
   data() {
     return {
       showHeader: false,
       aula4: false,
-      aula5: false
+      aula5: false,
+      lesson6: true
     }
   } 
 }

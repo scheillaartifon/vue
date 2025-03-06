@@ -2,11 +2,10 @@
 <!-- https://jsonplaceholder.typicode.com -->
 
 <template>
-    <h5>AULA 5 - Instruções de loops (diretiva v-for)</h5>
-    <div 
-        v-for="(obj, index) in todos"
-        v-bind:key="obj.id">
+    <h5>AULA 6 - Instruções de loops (diretiva v-for)</h5>
+    <div v-for="(obj, index) in todos" :key="obj.id">
         {{ index }} - {{ obj.title }}
+        <img v-if="obj.imgSrc" :src="obj.imgSrc">
     </div>
 </template>
 
@@ -19,13 +18,17 @@ export default{
                     "userId": 1,
                     "id": 1,
                     "title": "delectus aut autem",
-                    "completed": false
+                    "completed": false,
+                    "imgSrc": 'https://placehold.co/30',
+                    "imgAlt": 'Foto de Jhon Snow'
                 },
                 {
                     "userId": 1,
                     "id": 2,
                     "title": "quis ut nam facilis et officia qui",
-                    "completed": false
+                    "completed": false,
+                    "imgSrc": 'https://placehold.co/30',
+                    "imgAlt": 'Foto de Jhon Snow'
                 },
                 {
                     "userId": 1,
