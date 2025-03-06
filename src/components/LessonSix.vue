@@ -2,7 +2,7 @@
 <!-- https://jsonplaceholder.typicode.com -->
 
 <template>
-    <h5>AULA 6 - Instruções de loops (diretiva v-for)</h5>
+    <h5>AULA 6 - Atributos dinâmicos com data binding (diretiva v-bind)</h5>
     <div v-for="(obj, index) in todos" :key="obj.id">
         {{ index }} - {{ obj.title }}
         <img v-if="obj.imgSrc" :src="obj.imgSrc">
