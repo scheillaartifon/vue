@@ -6,6 +6,7 @@
     <AulaCinco v-if="aula5"/>
     <LessonSix v-if="lesson6"/>
     <LessonSeven v-if="lesson7"/>
+    <LessonEight v-if="lesson8"/>
   </div>
 
   <img
@@ -21,6 +22,7 @@ import AulaQuatro from './components/AulaQuatro';
 import AulaCinco from './components/AulaCinco';
 import LessonSix from './components/LessonSix.vue';
 import LessonSeven from './components/LessonSeven.vue';
+import LessonEight from './components/LessonEight.vue';
 
 export default {
   name: 'App',
@@ -30,7 +32,8 @@ export default {
     AulaQuatro,
     AulaCinco,
     LessonSix,
-    LessonSeven
+    LessonSeven,
+    LessonEight
   },
   data() {
     return {
@@ -38,7 +41,8 @@ export default {
       aula4: false,
       aula5: false,
       lesson6: false,
-      lesson7: true
+      lesson7: false,
+      lesson8: true
     }
   } 
 }
