@@ -9,6 +9,7 @@
     <LessonEight v-if="lesson8"/>
     <LessonNine v-if="lesson9"/>
     <LessonTen v-if="lesson10"/>
+    <LessonEleven v-if="lesson11"/>
   </div>
 
   <img v-if="helloWorld" alt="Vue logo" src="./assets/logo.png">
@@ -25,6 +26,7 @@ import LessonSeven from './components/LessonSeven.vue';
 import LessonEight from './components/LessonEight.vue';
 import LessonNine from './components/LessonNine.vue';
 import LessonTen from './components/LessonTen.vue';
+import LessonEleven from './components/LessonEleven.vue';
 
 export default {
   name: 'App',
@@ -37,7 +39,8 @@ export default {
     LessonSeven,
     LessonEight,
     LessonNine,
-    LessonTen
+    LessonTen,
+    LessonEleven
   },
   data() {
     return {
@@ -49,7 +52,8 @@ export default {
       lesson7: false,
       lesson8: false,
       lesson9: false,
-      lesson10: true
+      lesson10: false,
+      lesson11: true
     }
   } 
 }
