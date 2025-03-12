@@ -16,6 +16,9 @@
     <LessonFifteen v-if="lesson15" variant="danger">
       {{ "Seu formulário foi enviado com sucesso" }}
     </LessonFifteen>
+    <LessonSixteen v-if="lesson16" variant="success" @close="onClose">
+      {{ "Seu formulário foi enviado com sucesso" }}
+    </LessonSixteen>
   </div>
 
   <img v-if="helloWorld" alt="Vue logo" src="./assets/logo.png">
@@ -37,6 +40,7 @@ import LessonTwelve from './components/LessonTwelve.vue';
 import LessonThirteen from './components/LessonThirteen.vue';
 import LessonFourteen from './components/LessonFourteen.vue';
 import LessonFifteen from './components/LessonFifteen.vue';
+import LessonSixteen from './components/LessonSixteen.vue';
 
 export default {
   name: 'App',
@@ -54,7 +58,8 @@ export default {
     LessonTwelve,
     LessonThirteen,
     LessonFourteen,
-    LessonFifteen
+    LessonFifteen,
+    LessonSixteen
   },
   data() {
     return {
@@ -71,9 +76,16 @@ export default {
       lesson12: false,
       lesson13: false,
       lesson14: false,
-      lesson15: true
+      lesson15: false,
+      lesson16: true,
     }
-  } 
+  },
+  methods: {
+    onClose() {
+      this.lesson16 = false
+      console.log('on close')
+    }
+  }
 }
 </script>
 
