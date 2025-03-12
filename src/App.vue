@@ -13,6 +13,9 @@
     <LessonTwelve v-if="lesson12"/>
     <LessonThirteen v-if="lesson13"/>
     <LessonFourteen v-if="lesson14"/>
+    <LessonFifteen v-if="lesson15" variant="danger">
+      {{ "Seu formulário foi enviado com sucesso" }}
+    </LessonFifteen>
   </div>
 
   <img v-if="helloWorld" alt="Vue logo" src="./assets/logo.png">
@@ -33,6 +36,7 @@ import LessonEleven from './components/LessonEleven.vue';
 import LessonTwelve from './components/LessonTwelve.vue';
 import LessonThirteen from './components/LessonThirteen.vue';
 import LessonFourteen from './components/LessonFourteen.vue';
+import LessonFifteen from './components/LessonFifteen.vue';
 
 export default {
   name: 'App',
@@ -49,7 +53,8 @@ export default {
     LessonEleven,
     LessonTwelve,
     LessonThirteen,
-    LessonFourteen
+    LessonFourteen,
+    LessonFifteen
   },
   data() {
     return {
@@ -65,7 +70,8 @@ export default {
       lesson11: false,
       lesson12: false,
       lesson13: false,
-      lesson14: true
+      lesson14: false,
+      lesson15: true
     }
   } 
 }
