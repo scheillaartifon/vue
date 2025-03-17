@@ -4,8 +4,13 @@
     <!-- <router-link to="/usuarios/10">Usuário</router-link> | -->
     <router-link to="/lessons">Aulas</router-link>
   </nav>
-  <router-view/>
 
+  <AppProducts />
+  <br><br><br><br>
+  
+  <pre>{{ $store.state.cart }}</pre>
+
+  <br><br><br><br>
   <button @click="updateUser">Atualizar Perfil</button> <br>
   {{ $store.state.user.first_name }} <br>
   {{ $store.state.user.last_name }} <br>
@@ -13,8 +18,12 @@
 </template>
 
 <script>
+import AppProducts from './components/Products/AppProducts.vue';
+
   export default {
-    data() { },
+    components: {
+      AppProducts
+    },
     methods: {
       updateUser() {
         const newUser = {
