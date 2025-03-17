@@ -5,7 +5,18 @@
     <router-link to="/lessons">Aulas</router-link>
   </nav>
   <router-view/>
+
+  {{ $store.state.user.first_name }}
 </template>
+
+<script>
+  export default {
+    data() { },
+    created() {
+      console.log(this.$store.state.user)
+    }
+  }
+</script>
 
 <style>
 #app {

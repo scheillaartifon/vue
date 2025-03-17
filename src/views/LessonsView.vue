@@ -59,8 +59,8 @@
     },
     data() {
       return {
-        showHeader: true,
-        helloWorld: true,
+        showHeader: false,
+        helloWorld: false,
         aula4: false,
         aula5: false,
         lesson6: false,
