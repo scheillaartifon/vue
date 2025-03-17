@@ -5,6 +5,8 @@
     <router-link to="/lessons">Aulas</router-link>
   </nav>
 
+  {{ $store.getters.total }}
+  
   <AppProducts />
   <br><br><br><br>
   
