@@ -6,14 +6,24 @@
   </nav>
   <router-view/>
 
-  {{ $store.state.user.first_name }}
+  <button @click="updateUser">Atualizar Perfil</button> <br>
+  {{ $store.state.user.first_name }} <br>
+  {{ $store.state.user.last_name }} <br>
+  {{ $store.state.user.email }}
 </template>
 
 <script>
   export default {
     data() { },
-    created() {
-      console.log(this.$store.state.user)
+    methods: {
+      updateUser() {
+        const newUser = {
+          first_name: 'Daenerys',
+          last_name: 'Targaryen',
+          email: 'daenerys@email.com'
+        }
+        this.$store.commit('storeUser', newUser)
+      }
     }
   }
 </script>
