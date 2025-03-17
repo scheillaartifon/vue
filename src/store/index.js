@@ -27,7 +27,7 @@ export default createStore({
     cart: []
   },
   getters: {
-    total(state){
+    total(state) {
       return state.cart.reduce((total, item) => total += item.price, 0)
     },
   },
@@ -39,11 +39,19 @@ export default createStore({
     addProduct(state, data) {
       state.cart.push(data)
     },
-    removeProduct(state, id){
+    removeProduct(state, id) {
       const index = state.cart.findIndex(obj => obj.id === id)
       state.cart.splice(index, 1)
     }
   },
   actions: {
+    storeUser({ commit }, data) {
+      return new Promise( (resolve) => {
+        setTimeout(() => {
+          resolve()
+          commit('storeUser', data)
+        }, 3000);
+      })
+    }
   }
 })

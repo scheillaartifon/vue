@@ -6,7 +6,7 @@
   </nav>
 
   {{ $store.getters.total }}
-  
+
   <AppProducts />
   <br><br><br><br>
   
@@ -33,7 +33,10 @@ import AppProducts from './components/Products/AppProducts.vue';
           last_name: 'Targaryen',
           email: 'daenerys@email.com'
         }
-        this.$store.commit('storeUser', newUser)
+        // this.$store.commit('storeUser', newUser)
+        this.$store.dispatch('storeUser', newUser).then(()=>{
+          console.log('Terminou com sucesso')
+        })
       }
     }
   }
