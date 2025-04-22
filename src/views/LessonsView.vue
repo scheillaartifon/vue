@@ -20,6 +20,7 @@
         {{ "Seu formulário foi enviado com sucesso" }}
       </LessonSixteen>
       <LessonSeventeen v-if="lesson17"/>
+      <LessonTwentyFour v-if="lesson24"/>
     </div>  
   </template>
   
@@ -38,6 +39,7 @@
   import LessonFourteen from './../components/LessonFourteen.vue';
   import LessonFifteen from './../components/LessonFifteen.vue';
   import LessonSixteen from './../components/LessonSixteen.vue';
+  import LessonTwentyFour from './../components/LessonTwentyFour.vue';
   
   export default {
     name: 'App',
@@ -55,11 +57,12 @@
         LessonThirteen,
         LessonFourteen,
         LessonFifteen,
-        LessonSixteen
+        LessonSixteen,
+        LessonTwentyFour
     },
     data() {
       return {
-        showHeader: false,
+        showHeader: true,
         helloWorld: false,
         lesson4: false,
         lesson5: false,
@@ -74,7 +77,8 @@
         lesson14: false,
         lesson15: false,
         lesson16: false,
-        lesson17: true,
+        lesson17: false,
+        lesson24: true
       }
     },
     methods: {
