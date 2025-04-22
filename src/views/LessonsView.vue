@@ -2,8 +2,8 @@
     <TheHeader v-show="showHeader" />
   
     <div class="card-class">
-      <AulaQuatro v-if="aula4"/>
-      <AulaCinco v-if="aula5"/>
+      <LessonFour v-if="lesson4"/>
+      <LessonFive v-if="lesson5"/>
       <LessonSix v-if="lesson6"/>
       <LessonSeven v-if="lesson7"/>
       <LessonEight v-if="lesson8"/>
@@ -24,9 +24,9 @@
   </template>
   
   <script>
-  import TheHeader from './../components/TheHeader'
-  import AulaQuatro from './../components/AulaQuatro';
-  import AulaCinco from './../components/AulaCinco';
+  import TheHeader from './../components/TheHeader.vue'
+  import LessonFour from './../components/LessonFour.vue';
+  import LessonFive from './../components/LessonFive.vue';
   import LessonSix from './../components/LessonSix.vue';
   import LessonSeven from './../components/LessonSeven.vue';
   import LessonEight from './../components/LessonEight.vue';
@@ -43,8 +43,8 @@
     name: 'App',
     components: {
         TheHeader,
-        AulaQuatro,
-        AulaCinco,
+        LessonFour,
+        LessonFive,
         LessonSix,
         LessonSeven,
         LessonEight,
@@ -61,8 +61,8 @@
       return {
         showHeader: false,
         helloWorld: false,
-        aula4: false,
-        aula5: false,
+        lesson4: false,
+        lesson5: false,
         lesson6: false,
         lesson7: false,
         lesson8: false,
